@@ -1,0 +1,26 @@
+<div class="container p-5 border border-2 border-dark rounded mt-5">
+  <h1 class="text-center">Branch Tracks</h1>
+  <div class="row">
+    <div class="col-md-4">
+      <select name="branch" id="" class="form-select"[(ngModel)]="branch">>
+        <option value="AllBranchs">All Branchs</option>
+        <option value="Branch1">Branch 1</option>
+        <option value="Branch2">Branch 2</option>
+        <option value="Branch3">Branch 3</option>
+        <option value="Branch4">Branch 4</option>
+      </select>
+    </div>
+    <div class="col-md-8">
+      
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Track Name {{branch}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Branch Name</h6>
+                <p class="card-text">
+                    Track Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque illum eligendi architecto? Voluptates ut numquam est! Fugit, est architecto? Ipsam, rem autem quia et provident at inventore architecto consectetur. Non.
+                </p>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
