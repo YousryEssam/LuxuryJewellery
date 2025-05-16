@@ -1,0 +1,85 @@
+<div class="container py-5">
+  <div class="card shadow-lg mb-5">
+    <div class="card-body">
+      <h2 class="card-title text-center mb-4 text-primary">Add New Movie</h2>
+
+      <form (ngSubmit)="addMovie()">
+        <!-- Movie Name -->
+        <div class="mb-3">
+          <label class="form-label">Movie Name</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter movie name"
+            [(ngModel)]="movieName"
+            name="movieName"
+            required
+          />
+        </div>
+
+        <!-- Description -->
+        <div class="mb-3">
+          <label class="form-label">Description</label>
+          <textarea
+            class="form-control"
+            rows="4"
+            placeholder="Enter movie description"
+            [(ngModel)]="movieDescription"
+            name="movieDescription"
+            required
+          ></textarea>
+        </div>
+
+        <!-- Rating -->
+        <div class="mb-3">
+          <label class="form-label">Rating</label>
+          <input
+            type="number"
+            class="form-control"
+            [(ngModel)]="movieRating"
+            name="movieRating"
+            min="0"
+            max="10"
+            step="0.1"
+          />
+        </div>
+
+        <!-- Image URL -->
+        <div class="mb-3">
+          <label class="form-label">Image URL</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter image URL"
+            [(ngModel)]="movieImage"
+            name="movieImage"
+            required
+          />
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary px-4">Save Movie</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Movie Cards Section -->
+  <div class="row g-4">
+
+    @for (movie of movies; track $index) {
+        <div class="col-md-4">
+      <div class="card h-100 shadow-sm">
+        <img [src]="movie.image" class="card-img-top" alt="{{ movie.name }}" style="height: 250px; object-fit: cover;" />
+        <div class="card-body">
+          <h5 class="card-title">{{ movie.name }}</h5>
+          <h6 class="text-muted">Rating: {{ movie.rating }}/10</h6>
+          <p class="card-text">{{ movie.description }}</p>
+        </div>
+      </div>
+        </div>
+    }
+    
+  </div>
+</div>

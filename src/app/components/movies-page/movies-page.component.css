@@ -1,0 +1,15 @@
+.card {
+  border-radius: 1rem;
+}
+
+.form-label {
+  font-weight: 500;
+}
+
+.card-title {
+  font-weight: 600;
+}
+
+.card-img-top {
+  border-radius: 0.5rem 0.5rem 0 0;
+}

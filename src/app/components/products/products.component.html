@@ -1,0 +1,17 @@
+<div style="margin: 10px; padding: 10px;">
+    <h2 style="text-align: center;">Our Products</h2>
+    <div class="mb-3" style="display: flex ;justify-content: end;">
+        <input style="width: 30%;" type="search" id="search" class="form-control" [(ngModel)]="search"
+            placeholder="Enter Product Name">
+    </div>
+
+    <div class="container mt-5">
+        <h2 class="mb-4">Product List</h2>
+
+        <div class="d-flex flex-wrap gap-3">
+            @for (product of filteredMovies; track product.id) {
+            <app-card [product]="product"></app-card>
+            }
+        </div>
+    </div>
+</div>

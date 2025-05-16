@@ -7,28 +7,26 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './branch-tracks.component.html',
   styleUrl: './branch-tracks.component.css'
 })
-class Track{
-  constructor(
-    public name: string,
-    public branch : string,
-    public description: string
-  ) {}
-}
+
+
+
 export class BranchTracksComponent {
   branch : string = "AllBranchs";
-  tracks: Track[] = [
-    new Track("Track 1", "Branch 1", "Description for Track 1"),
-    new Track("Track 2", "Branch 2", "Description for Track 2"),
-    new Track("Track 3", "Branch 3", "Description for Track 3"),
-    new Track("Track 4", "Branch 4", "Description for Track 4"),
-    new Track("Track 5", "Branch 5", "Description for Track 5"),
-    new Track("Track 6", "Branch 6", "Description for Track 6"),
-    new Track("Track 7", "Branch 7", "Description for Track 7"),
-    new Track("Track 8", "Branch 8", "Description for Track 8"),
-    new Track("AI", "CS", "Introductory level"),
-    new Track("Web", "SE", "Hands-on training"),
-    new Track("Mobile", "IS", "Project-based learning"),
-    new Track("Cloud", "IT", "Advanced concepts"),
-    new Track("Security", "DS", "Theory and practice"),
+  
+  tracks: {name : string , branch : string , description : string}[] = [
+  { name: "PWD", branch: "Branch 1", description: "Description for Track 1" },
+  { name: "OS", branch: "Branch 2", description: "Description for Track 2" },
+  { name: "UI/UX", branch: "Branch 3", description: "Description for Track 3" },
+  { name: "Game Devolpment", branch: "Branch 3", description: "Description for Track 4" },
+  { name: "Track 5", branch: "Branch 2", description: "Description for Track 5" },
+  { name: "Track 6", branch: "Branch 1", description: "Description for Track 6" },
+  { name: "Track 7", branch: "Branch 1", description: "Description for Track 7" },
+  { name: "Track 8", branch: "Branch 1", description: "Description for Track 8" },
+  { name: "AI", branch: "Branch 2", description: "Introductory level" },
+  { name: "Web", branch: "Branch 3", description: "Hands-on training" },
+  { name: "Mobile", branch: "Branch 3", description: "Project-based learning" },
+  { name: "Cloud", branch: "Branch 2", description: "Advanced concepts" },
+  { name: "Security", branch: "Branch 2", description: "Theory and practice" }
   ];
+
 }

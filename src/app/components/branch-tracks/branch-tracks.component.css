@@ -1,0 +1,18 @@
+.card-title {
+  font-weight: bold;
+}
+
+.card {
+  transition: transform 0.2s ease;
+}
+.card:hover {
+  transform: scale(1.02);
+}
+
+.gradient-container {
+  background: linear-gradient(135deg, #667eea, #764ba2); /* Purple to violet */
+  padding: 3rem;
+  border-radius: 1rem;
+  color: white;
+}
+
